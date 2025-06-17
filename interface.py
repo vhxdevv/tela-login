@@ -1,11 +1,15 @@
 import customtkinter
 from auth import autenticar_usuario # type: ignore
 from tela_esq_senha import esq_senha
+from registro import register_action
+
+customtkinter.set_appearance_mode("Dark")
+customtkinter.set_default_color_theme("blue")
 
 def criar_interface():
     app = customtkinter.CTk()
     app.title("Tela de Login")
-    app.geometry("400x300")
+    app.geometry("400x350")
     app.configure(fg_color="#1e1e1e")
 
     def login_action():
@@ -37,9 +41,12 @@ def criar_interface():
 
 
     botao_login = customtkinter.CTkButton(app, text="Fazer login", fg_color="#00BE75", width=220, height=30, corner_radius=10, font=("OpenSans_Condensed-Italic", 12), command=login_action)
-    botao_login.pack(pady=40)
+    botao_login.pack(pady=20)
 
-    #botao_registro
+
+    botao_registro = customtkinter.CTkButton(app, text="Registrar-se", fg_color="#4D4A4A", width=220, height=30, corner_radius=10, font=("OpenSans_Condensed-Italic", 12), command=register_action)
+    botao_registro.pack(pady=5)
+    
 
     rotulo_mensagem = customtkinter.CTkLabel(app, text="")
     rotulo_mensagem.pack()
