@@ -1,7 +1,7 @@
 import customtkinter
 from auth import autenticar_usuario # type: ignore
 from tela_esq_senha import esq_senha
-from registro import register_action
+from registro import tela_registro
 
 customtkinter.set_appearance_mode("Dark")
 customtkinter.set_default_color_theme("blue")
@@ -44,7 +44,7 @@ def criar_interface():
     botao_login.pack(pady=20)
 
 
-    botao_registro = customtkinter.CTkButton(app, text="Registrar-se", fg_color="#4D4A4A", width=220, height=30, corner_radius=10, font=("OpenSans_Condensed-Italic", 12), command=register_action)
+    botao_registro = customtkinter.CTkButton(app, text="Registrar-se", fg_color="#4D4A4A", width=220, height=30, corner_radius=10, font=("OpenSans_Condensed-Italic", 12), command=tela_registro)
     botao_registro.pack(pady=5)
     
 
