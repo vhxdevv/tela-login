@@ -17,11 +17,12 @@ def tela_registro():
             sucesso = cadastrar_usuario(usuario, senha)
             if sucesso:
                rotulo_mensagem.configure(text= "Registro feito com sucesso!", text_color="green")
+               reg.after(2000, reg.destroy)
             else:
                 rotulo_mensagem.configure(text= "Usuario ja existe!", text_color="red")
 
     rotulo_titulo = customtkinter.CTkLabel(reg, text="Faça seu registro", font=("OpenSans_Condensed-Italic", 20), text_color="white")
-    rotulo_titulo.pack(pady=10)
+    rotulo_titulo.pack(pady=20)
 
     entrada_usuario = customtkinter.CTkEntry(reg, placeholder_text="Digite um nome de usuario", fg_color="#272727", width=220, height=30, corner_radius=10, font=("OpenSans_Condensed-Italic", 12))
     entrada_usuario.pack(pady=10)

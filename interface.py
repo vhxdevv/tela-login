@@ -41,11 +41,11 @@ def criar_interface():
 
 
     botao_login = customtkinter.CTkButton(app, text="Fazer login", fg_color="#00BE75", width=220, height=30, corner_radius=10, font=("OpenSans_Condensed-Italic", 12), command=login_action)
-    botao_login.pack(pady=20)
+    botao_login.pack(pady=30)
 
 
     botao_registro = customtkinter.CTkButton(app, text="Registrar-se", fg_color="#4D4A4A", width=220, height=30, corner_radius=10, font=("OpenSans_Condensed-Italic", 12), command=tela_registro)
-    botao_registro.pack(pady=5)
+    botao_registro.pack()
     
 
     rotulo_mensagem = customtkinter.CTkLabel(app, text="")
